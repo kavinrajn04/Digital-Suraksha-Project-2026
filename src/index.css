@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+:root {
+  --base-font: 18px;
+}
+
+html {
+  font-size: var(--base-font);
+}
+
+/* Visible keyboard focus for accessibility */
+:focus-visible {
+  outline: 4px solid #1d4ed8;
+  outline-offset: 3px;
+}
+
+/* High-contrast mode (toggled by a class on <html>) */
+html.high-contrast body {
+  background: #000;
+  color: #fff;
+}
+
+/* High-contrast mode: black background, white text, yellow links and buttons */
+html.high-contrast *:not(svg):not(path) {
+  background-color: #000 !important;
+  color: #fff !important;
+  border-color: #ff0 !important;
+}
+
+html.high-contrast a,
+html.high-contrast button {
+  color: #ff0 !important;
+}
